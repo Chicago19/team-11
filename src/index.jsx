@@ -6,5 +6,3 @@ class HelloMessage extends React.Component {
     return <div>Hello {this.props.name}</div>;
   }
 }
-
-ReactDOM.render(<HelloMessage name="World" />, document.getElementById('app'));

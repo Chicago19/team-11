@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/Chicago19/team-11#readme",
   "dependencies": {
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
