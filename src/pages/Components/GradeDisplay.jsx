@@ -9,9 +9,10 @@ const getFromFirebase = phone => {
 };
 
 export default function GradeDisplay({ phone }) {
+  console.log(phone);
   const [person, setPerson] = useState({ VentureBasic: {} });
 
-  const getFromFirebase = phone => {
+  const getFromFirebase = () => {
     return firebase
       .database()
       .ref('allUsers')
