@@ -29,6 +29,8 @@
 
 		function handleLoginSend() {
 
+			if(document.getElementById('codeInput')) return false;
+
 			var textSentContainer = document.getElementById('textSentContainer');
 			var fourDigitContainer = document.getElementById('fourDigitContainer');
 
@@ -39,7 +41,13 @@
 			var codeInput = document.createElement("input");
 			codeInput.setAttribute('placeholder', '4-digit code');
 			codeInput.setAttribute('autocomplete', 'off');
-			codeInput.setAttribute('style', 'border: .5px solid grey; padding: 10px; border-radius: 10px; width: 110px;');
+			codeInput.id = "codeInput";
+			codeInput.setAttribute('style', 'text-align: center; border: .5px solid grey; padding: 10px; border-radius: 10px; width: 110px;');
+			codeInput.setAttribute('maxlength', '4');
+
+			var codeEnter = document.createElement("button");
+			codeEnter.setAttribute('style', 'color: #41b6e6;');
+			codeEnter.innerHTML = "Enter";
 
 			var textSent = document.createElement("p");
 			textSent.setAttribute('style', 'text-align: center; margin-top: 25px');
@@ -53,6 +61,8 @@
 			resend.innerHTML = "<b> Resend code </b>";
 
 			fourDigitContainer.appendChild(codeInput);
+			fourDigitContainer.appendChild(document.createElement('br'));
+			fourDigitContainer.appendChild(codeEnter);
 			textSentContainer.appendChild(textSent);
 			textSentContainer.appendChild(resend);
 
@@ -126,7 +136,7 @@
 
 	<script src="/Login_v2/vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="/Login_v2/vendor/animsition/js/animsition.min.js"></script>
-	<script src="/Login_v2/vendor/bootstrap/js/popper.js"></script>
+	<script src="Login_v2/vendor/bootstrap/js/popper.js"></script>
 	<script src="/Login_v2/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/Login_v2/vendor/select2/select2.min.js"></script>
 	<script src="/Login_v2/vendor/daterangepicker/moment.min.js"></script>
