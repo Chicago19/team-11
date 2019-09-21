@@ -44,6 +44,7 @@
             }
 
             function updateIframe(src) {
+                console.log(src);
                 document.getElementById('portalIframe').src = src;
                 return false;
             }
@@ -64,14 +65,14 @@
 
         <ul class="list-unstyled components">
 
-            <li>
-                <a href="#">
+            <li onclick="return updateIframe('grades.html')">
+                <a href="">
                     <i class="fas fa-graduation-cap"></i>
                       &nbsp Grades
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li onclick="return updateIframe('attendance.html')">
+                <a href="">
                     <i class="fas fa-clipboard"></i>
                       &nbsp Attendance
                 </a>
@@ -82,7 +83,13 @@
                       &nbsp Policies
                 </a>
             </li>
-            <li onclick="updateIframe('RecommendationsMap.html')">
+            <li onclick="return updateIframe('calendar.html')">
+                <a href="">
+                    <i class="fas fa-calendar"></i>
+                      &nbsp Calendar
+                </a>
+            </li>
+            <li onclick="return updateIframe('RecommendationsMap.html')">
                 <a href="">
                     <i class="fas fa-map-signs"></i>
                       &nbsp Resource Map
