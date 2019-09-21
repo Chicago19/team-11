@@ -44,7 +44,6 @@
             }
 
             function updateIframe(src) {
-                console.log(src);
                 document.getElementById('portalIframe').src = src;
                 return false;
             }
@@ -65,28 +64,18 @@
 
         <ul class="list-unstyled components">
 
-            <li onclick="return updateIframe('grades.html')">
+            <li onclick="return updateIframe('policies.html')">
                 <a href="">
                     <i class="fas fa-graduation-cap"></i>
-                      &nbsp Grades
+                      &nbsp Academic Information
                 </a>
             </li>
-            <li onclick="return updateIframe('attendance.html')">
-                <a href="">
-                    <i class="fas fa-clipboard"></i>
-                      &nbsp Attendance
                 </a>
             </li>
             <li onclick="return updateIframe('policies.html')">
                 <a href="">
-                    <i class="fas fa-sticky-note"></i>
-                      &nbsp Policies
-                </a>
-            </li>
-            <li onclick="return updateIframe('calendar.html')">
-                <a href="">
                     <i class="fas fa-calendar"></i>
-                      &nbsp Calendar
+                      &nbsp Policies
                 </a>
             </li>
             <li onclick="return updateIframe('RecommendationsMap.html')">
@@ -99,7 +88,7 @@
 
     </nav>
 
-    <iframe id="portalIframe" style="left: 280px; width: 100%; bottom: 0; right: 0" src="RecommendationsMap.html"></iframe>
+    <iframe id="portalIframe" style="left: 280px; width: 100%;" src="RecommendationsMap.html"></iframe>
 
 
     <!-- Page Content  -->
