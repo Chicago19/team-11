@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "back:dev": "nodemon backend/index.js",
+    "back:start": "node backend/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,16 +29,21 @@
   "dependencies": {
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
+    "@koa/router": "^8.0.1",
     "bulma": "^0.7.5",
+    "koa": "^2.8.1",
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "twilio": "^3.35.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "dotenv": "^8.1.0",
+    "nodemon": "^1.19.2",
     "parcel-bundler": "^1.12.3"
   }
 }
