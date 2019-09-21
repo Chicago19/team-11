@@ -26,40 +26,55 @@
 <body>
 
 	<script defer>
+
 		function handleLoginSend() {
+
 			if(document.getElementById('codeInput')) return false;
+
 			var textSentContainer = document.getElementById('textSentContainer');
 			var fourDigitContainer = document.getElementById('fourDigitContainer');
+
 			fourDigitContainer.setAttribute('style', 'text-align: center; margin-top: 25px');
+
 			document.getElementById("formContainer").style.display = "none";
+
 			var codeInput = document.createElement("input");
 			codeInput.setAttribute('placeholder', '4-digit code');
 			codeInput.setAttribute('autocomplete', 'off');
 			codeInput.id = "codeInput";
 			codeInput.setAttribute('style', 'text-align: center; border: .5px solid grey; padding: 10px; border-radius: 10px; width: 110px;');
 			codeInput.setAttribute('maxlength', '4');
+
 			var codeEnter = document.createElement("button");
 			codeEnter.setAttribute('style', 'color: #41b6e6;');
 			codeEnter.innerHTML = "Enter";
+
 			var textSent = document.createElement("p");
 			textSent.setAttribute('style', 'text-align: center; margin-top: 25px');
 			textSent.id = "textSent";
 			textSent.innerHTML = "Text sent";
+
 			var resend = document.createElement("p");
 			resend.setAttribute('style', 'text-align: center; color: #41b6e6; cursor: pointer;');
 			resend.onclick = resendText;
 			resend.id = "resendText";
 			resend.innerHTML = "<b> Resend code </b>";
+
 			fourDigitContainer.appendChild(codeInput);
 			fourDigitContainer.appendChild(document.createElement('br'));
 			fourDigitContainer.appendChild(codeEnter);
+
 			textSentContainer.appendChild(textSent);
 			textSentContainer.appendChild(resend);
-			return false;
+
+			return false
+
 		}
 		function resendText() {
+
 			document.getElementById("resendText").style.display = "none";
 			document.getElementById("textSent").innerHTML = "Text resent";
+			
 		}
 	</script>
 
