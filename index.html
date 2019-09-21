@@ -25,44 +25,96 @@
 </head>
 <body>
 
+	<script defer>
+
+		function handleLoginSend() {
+
+			var textSentContainer = document.getElementById('textSentContainer');
+			var fourDigitContainer = document.getElementById('fourDigitContainer');
+
+			fourDigitContainer.setAttribute('style', 'text-align: center; margin-top: 25px');
+
+			document.getElementById("formContainer").style.display = "none";
+
+			var codeInput = document.createElement("input");
+			codeInput.setAttribute('placeholder', '4-digit code');
+			codeInput.setAttribute('autocomplete', 'off');
+			codeInput.setAttribute('style', 'border: .5px solid grey; padding: 10px; border-radius: 10px; width: 110px;');
+
+			var textSent = document.createElement("p");
+			textSent.setAttribute('style', 'text-align: center; margin-top: 25px');
+			textSent.id = "textSent";
+			textSent.innerHTML = "Text sent";
+
+			var resend = document.createElement("p");
+			resend.setAttribute('style', 'text-align: center; color: #41b6e6; cursor: pointer;');
+			resend.onclick = resendText;
+			resend.id = "resendText";
+			resend.innerHTML = "<b> Resend code </b>";
+
+			fourDigitContainer.appendChild(codeInput);
+			textSentContainer.appendChild(textSent);
+			textSentContainer.appendChild(resend);
+
+			return false;
+		}
+
+		function resendText() {
+			document.getElementById("resendText").style.display = "none";
+			document.getElementById("textSent").innerHTML = "Text resent";
+		}
+
+	</script>
+
     <div id="app"></div>
     <script src="src/index.jsx"></script>
 
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" onsubmit="return handleLoginSend()">
 
 					<span class="login100-form-title p-b-48">
-						<img src="logo1.jpg"></img>
-					</span>
-					<span class="login100-form-title p-b-26">
-						Welcome
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<p> Phone Number </p>
-						<input class="input100" type="text" name="email">
-					</div>
-
-					<p style="margin-top: -25px; padding-bottom: 50px; font-size: 10px"> A 4-digit code will be sent to your phone number. </p>
-
-
-					<div style="background-color: #41b6e6; border-radius: 5px">
-						<div class="login100-form-bgbtn"></div>
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-
-					<div class="text-center p-t-115">
-						<span class="txt1">
-							Don’t have an account?
-						</span>
-
-						<a class="txt2" href="#">
-							Sign Up
+						<a href="https://poderworks.org">
+							<img src="logo1.jpg"></img>
 						</a>
+					</span>
+					<span style="margin-top: -35px;" class="login100-form-title p-b-26">
+						Login
+					</span>
+
+					<div id="textSentContainer">
+						<div id="fourDigitContainer"></div>
+					</div>
+
+					<div id="formContainer">
+
+						<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+							<p> Phone Number </p>
+							<input class="input100" type="text" name="ema;il" required pattern="[0-9]{10}" maxlength="10">
+						</div>
+
+						<p style="margin-top: -25px; padding-bottom: 50px; font-size: 10px"> A 4-digit code will be sent to your phone number. </p>
+
+
+						<div style="background-color: #41b6e6; border-radius: 5px">
+							<div class="login100-form-bgbtn"></div>
+							<button id="loginButton" class="login100-form-btn">
+								Login
+							</button>
+						</div>
+
+						<div class="text-center p-t-115">
+							<span class="txt1" style="font-size: 15px;">
+								Don’t have an account?
+							</span>
+
+							<a class="txt2" style="color: #41b6e6; font-size: 15px" href="https://docs.google.com/forms/d/e/1FAIpQLSfgU_8c_eG6czlP4PvwznJncgZmBhusrO7D2wmXza0cjbuJtw/viewform?usp=sf_link">
+								<b>
+									Sign Up
+								</b>
+							</a>
+						</div>
 					</div>
 				</form>
 			</div>
