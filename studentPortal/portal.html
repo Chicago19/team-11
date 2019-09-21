@@ -44,6 +44,7 @@
             }
 
             function updateIframe(src) {
+                document.getElementById('portalIframe').src = document.getElementById('portalIframe').src;
                 document.getElementById('portalIframe').src = src;
                 return false;
             }
@@ -52,10 +53,10 @@
 
         <div class="wrapper">
     <!-- Sidebar  -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
+    <nav id="sidebar" style="background-color: #41b6e6">
+        <div class="sidebar-header" style="background-color: #41b6e6">
             <h3>
-                Navigation Directory
+                Portal Pages
             </h3>
             <strong>Nav</strong>
                 <i id="sidebarCollapse" style="font-size: 25px; position: absolute; top: 50px; left: 210px; cursor: pointer;" onclick="toggleSideNav()" class="fas fa-bars"></i>
@@ -64,7 +65,7 @@
 
         <ul class="list-unstyled components">
 
-            <li onclick="return updateIframe('policies.html')">
+            <li onclick="return updateIframe('grades_attendance_calendar.html')">
                 <a href="">
                     <i class="fas fa-graduation-cap"></i>
                       &nbsp Academic Information
@@ -88,7 +89,7 @@
 
     </nav>
 
-    <iframe id="portalIframe" style="left: 280px; width: 100%;" src="RecommendationsMap.html"></iframe>
+    <iframe id="portalIframe" style="left: 280px; width: 100%;" src="policies.html"></iframe>
 
 
     <!-- Page Content  -->
