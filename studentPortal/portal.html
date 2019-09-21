@@ -15,6 +15,8 @@
         <!-- Font Awesome JS -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
     </head>
     <body>
 
@@ -39,6 +41,11 @@
                     sidebar.style.left = "42px";
                     sidebar.style.fontSize = "15px";
                 }
+            }
+
+            function updateIframe(src) {
+                document.getElementById('portalIframe').src = src;
+                return false;
             }
 
         </script>
@@ -69,14 +76,14 @@
                       &nbsp Attendance
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li onclick="return updateIframe('policies.html')">
+                <a href="">
                     <i class="fas fa-sticky-note"></i>
                       &nbsp Policies
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li onclick="updateIframe('RecommendationsMap.html')">
+                <a href="">
                     <i class="fas fa-map-signs"></i>
                       &nbsp Resource Map
                 </a>
@@ -84,6 +91,9 @@
         </ul>
 
     </nav>
+
+    <iframe id="portalIframe" style="left: 280px; width: 100%; bottom: 0; right: 0" src="RecommendationsMap.html"></iframe>
+
 
     <!-- Page Content  -->
 </div>

@@ -82,9 +82,9 @@
                 view: 'Auto'
             }).then(results => {
                 //Get the results in GeoJSON format and add it to the data source.
-                var data = results.geojson.getFeatures();  
+                var data = results.geojson.getFeatures();
                 datasource.add(data);
-             
+
                 //Set the camera to the bounds of the results.
                 map.setCamera({
                     bounds: data.bbox,
