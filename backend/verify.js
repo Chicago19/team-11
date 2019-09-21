@@ -16,9 +16,13 @@ const startVerify = async (to, channel) => {
 };
 
 const endVerify = async (to, code) => {
-  return client.verify
-    .services(SERVICE_SID)
-    .verificationChecks.create({ to, code });
+  try {
+    return client.verify
+      .services(SERVICE_SID)
+      .verificationChecks.create({ to, code });
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 module.exports = { startVerify, endVerify };

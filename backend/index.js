@@ -7,7 +7,7 @@ const router = new Router();
 const { startVerify, endVerify } = require('./verify');
 
 router.get('/startVerify', async (ctx, next) => {
-  console.log(query);
+  //   console.log(query);
   ctx.body = await startVerify(`+${ctx.request.query.to}`, 'call');
 });
 
