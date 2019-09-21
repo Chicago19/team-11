@@ -7,7 +7,7 @@ export default function Auth() {
   const [phNumber, setPhNumber] = useState('');
   const [pendingCode, setPendingCode] = useState('');
   const [revealPendingCode, setRevealPendingCode] = useState(false);
-  const [authenticated, setAuthenticated] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
 
   const handleSubmitPress = async event => {
     event.preventDefault();
@@ -54,7 +54,7 @@ export default function Auth() {
           <button onClick={handleSubmitPress}>Submit</button>
         </form>
       ) : null}
-      {authenticated ? <GradeDisplay /> : null}
+      {authenticated ? <GradeDisplay phone={phNumber} /> : null}
     </div>
   );
 }
