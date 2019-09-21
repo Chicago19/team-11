@@ -4,8 +4,8 @@
   "description": "Team 11's project at Code for Good",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "parcel studentPortal/portal.html",
+    "build": "parcel build studentPortal/portal.html",
     "back:dev": "nodemon backend/index.js",
     "back:start": "node backend/index.js"
   },
