@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="manifest" href="/manifest.json" />
 	<title>Poder Online Access</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +16,12 @@
 	<link rel="stylesheet" type="text/css" href="/Login_v2/vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="/Login_v2/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/Login_v2/css/main.css">
+	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="node_modules/bulma/bulma.sass" />
+	<script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
 </head>
 <body>
 
@@ -25,33 +32,27 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form">
+
+					<span class="login100-form-title p-b-48">
+						<img src="logo1.jpg"></img>
+					</span>
 					<span class="login100-form-title p-b-26">
 						Welcome
 					</span>
-					<span class="login100-form-title p-b-48">
-						<i class="zmdi zmdi-font"></i>
-					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<p> Phone Number </p>
 						<input class="input100" type="text" name="email">
-						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-						</span>
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100" data-placeholder="Password"></span>
-					</div>
+					<p style="margin-top: -25px; padding-bottom: 50px; font-size: 10px"> A 4-digit code will be sent to your phone number. </p>
 
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								Login
-							</button>
-						</div>
+
+					<div style="background-color: #41b6e6; border-radius: 5px">
+						<div class="login100-form-bgbtn"></div>
+						<button class="login100-form-btn">
+							Login
+						</button>
 					</div>
 
 					<div class="text-center p-t-115">
