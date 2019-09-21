@@ -1,6 +1,7 @@
 const firebase = require('firebase');
 const faker = require('faker');
 
+// these credentials have been revoked!
 firebase.initializeApp({
   apiKey: 'AIzaSyBW7RjQA3076jmwlILkGxUply9nL-C_r0c',
   authDomain: 'code4good2k19.firebaseapp.com',
