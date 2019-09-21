@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Logo from '../../../logo1.jpg';
+
 import GradeDisplay from './GradeDisplay';
 // import 'regenerator-runtime/runtime';
 
@@ -7,7 +9,7 @@ export default function Auth() {
   const [phNumber, setPhNumber] = useState('');
   const [pendingCode, setPendingCode] = useState('');
   const [revealPendingCode, setRevealPendingCode] = useState(false);
-  const [authenticated, setAuthenticated] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
 
   const handleSubmitPress = async event => {
     event.preventDefault();
@@ -35,7 +37,18 @@ export default function Auth() {
     <div>
       {' '}
       {!authenticated ? (
-        <form>
+        <form className="login100-form validate-form">
+          <span className="login100-form-title p-b-48">
+            <a href="https://poderworks.org">
+              <img src={Logo}></img>
+            </a>
+          </span>
+          <span
+            style={{ marginTop: '-35px' }}
+            className="login100-form-title p-b-26"
+          >
+            Login
+          </span>
           {!revealPendingCode ? (
             <input
               value={phNumber}
@@ -54,7 +67,7 @@ export default function Auth() {
           <button onClick={handleSubmitPress}>Submit</button>
         </form>
       ) : null}
-      {authenticated ? <GradeDisplay /> : null}
+      {authenticated ? <GradeDisplay phone={phNumber} /> : null}
     </div>
   );
 }

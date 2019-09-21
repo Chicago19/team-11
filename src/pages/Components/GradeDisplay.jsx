@@ -23,7 +23,7 @@ export default function GradeDisplay({ phone }) {
         setPerson(val.toJSON());
       });
   };
-  getFromFirebase('573-614-2656');
+  getFromFirebase(phone);
   return (
     <div>
       <table id="grades">
