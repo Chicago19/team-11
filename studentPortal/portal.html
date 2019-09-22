@@ -45,6 +45,7 @@
 
             function updateIframe(src) {
                 document.getElementById('portalIframe').src = src;
+                document.getElementById('portalIframe').src = src;
                 return false;
             }
 
@@ -64,7 +65,7 @@
 
         <ul class="list-unstyled components">
 
-            <li onclick="return updateIframe('../index.html')">
+            <li onclick="return updateIframe('index.html')">
                 <a href="">
                     <i class="fas fa-graduation-cap"></i>
                       &nbsp Academic Information
@@ -72,7 +73,7 @@
             </li>
                 </a>
             </li>
-            <li onclick="return updateIframe('/studentPortal/policies.html')">
+            <li onclick="return updateIframe('policies.html')">
                 <a href="">
                     <i class="fas fa-calendar"></i>
                       &nbsp Policies
@@ -88,7 +89,7 @@
 
     </nav>
 
-    <iframe id="portalIframe" style="left: 280px; width: 100%;" src="../index.html"></iframe>
+    <iframe id="portalIframe" style="left: 280px; width: 100%;" src="index.html"></iframe>
 
 
     <!-- Page Content  -->
