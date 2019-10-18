@@ -3,13 +3,13 @@ const faker = require('faker');
 
 // these credentials have been revoked!
 firebase.initializeApp({
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  projectId: '',
-  storageBucket: '.appspot.com',
-  messagingSenderId: '',
-  appId: '1::web:d715002170e2b6eecabd7b',
+  apiKey: 'apiKey',
+  authDomain: 'domain.test.com',
+  databaseURL: 'DB_URL',
+  projectId: 'project_id',
+  storageBucket: 'storage_bucket',
+  messagingSenderId: 'messagingSenderId',
+  appId: 'appId',
 });
 
 const database = firebase.database();

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import firebase from 'firebase';
 firebase.initializeApp({
-  databaseURL: '',
+  databaseURL: 'https://code4good2k19.firebaseio.com',
 });
 
 const getFromFirebase = phone => {
